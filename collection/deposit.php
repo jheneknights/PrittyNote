@@ -2,10 +2,11 @@
 
 set_time_limit(0);
 ini_set('memory_limit', '700M'); //uses sth like 100 - just given it more
+date_default_timezone_set('Africa/Nairobi');
 
-require_once('../controllers/dbconn.php');
+require_once('../need/dbconn.php');
 
-$file = file_get_contents("../".$_GET['id']."/ALLTWEETS.json");
+$file = file_get_contents('../collection/archive/'.date("dmy").'-archive.json');
 $stories = json_decode($file, true);
 
 $c = $count = 0;
@@ -112,7 +113,7 @@ foreach($stories as $tweet) {
 				$scripture = htmlspecialchars($scripture, ENT_QUOTES,'UTF-8', true);
 					
 				//NOW FEED ALL REQUIRED INFO TO THE DATABASE
-				$sql = "INSERT INTO ".$_GET['id']."(message, tuser, tags, keywords, quoted, email, url, likes, postdate) VALUES('$message', '$username', '$tags', '$keywords', '$scripture', '$email', '$http', '$likes', NOW())";
+				$sql = "INSERT INTO archive(message, tuser, tags, keywords, quoted, email, url, likes, postdate) VALUES('$message', '$username', '$tags', '$keywords', '$scripture', '$email', '$http', '$likes', NOW())";
 				
 				$r = mysqli_query ($dbc, $sql) or trigger_error("Query: $sql \n<br/>MySQL Error: " . mysqli_error($dbc));
 				$count ++;
@@ -133,9 +134,11 @@ foreach($stories as $tweet) {
 }
 
 
-$fp = fopen('../'.$_GET['id'].'/ERRORS.json', 'w');
+$fp = fopen('../collection/errors/'.date('dmy').'-errors.json', 'w');
 fwrite($fp, json_encode($error));
 fclose($fp);
+
+unlink('../run/error_log'); //delete the error log from the folder because of error such as duplicate values
 
 echo  '<h2><span style="color:#0E0;">'.$count.'</span> valid tweets collected.</h2>';
 
