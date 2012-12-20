@@ -1,0 +1,84 @@
+/**
+ * CSS STYLING FILE
+ * User: Eugene
+ * Date: 9/19/12
+ * Time: 10:52 AM
+ * http://fonts.googleapis.com/css?family=Marmelad|Electrolize|Dosis:400,500|Happy+Monkey
+ */
+
+
+/* general purpose */
+body{font-weight: 300; font-size: 0.75em; color: #666}
+body{font-family:'trebuchet ms'; width: 100%; margin: auto; max-width: 1900px; min-width: 800px;}
+.wf-active body{font-family: 'comfortaa', sans-serif;}
+
+a{text-decoration:none; cursor: pointer}
+h3{color: #fefefe;}
+h1, h2, h4{color:#fc0;}
+h1{font-size:40px; font-weight:bold;}
+h1 span, h2 span, h3 span, h4 span{color:#fefefe;}
+
+span{color: #fc0}
+
+/**** HEADER ****/
+.header{width:100%; background:#c00; background: url(../images/cloud.png) #c00 top left; opacity: 0.9;
+border: 2px solid #a52a2a}
+.header h2{font-size: 2em}
+.header table{width: 100%}
+.header table td{width: 33%; text-align: center}
+
+.getuser{background: #FFCC00; width: 100%; padding: 1%; border-bottom: 2px solid #a52a2a}
+.getuser td{width: 100%; text-align: center; padding: 1%}
+a#signinwithtwitter{background: #39F; padding: 2%; color: #fff; border-radius: 4px; border: 2px solid #ffffff}
+a#twtme{color: #39f}
+
+/*** the note Images ***/
+.introduction{width: 100%;}
+.introduction img{width: 100%;}
+
+/*** welcome page explanation of the App ***/
+.explanation p{width: 80%; margin: auto; font-size: 1.2em}
+.explanation span{color: #c00;}
+.explanation{width: 100%; background: #ffffff; padding: 2%; position: fixed; bottom: 0; left: 0;
+    box-shadow: 3px 3px 5px 5px #555}
+.explanation hr{width: 90%; opacity: 0.4}
+
+
+/****** STATUS INPUT/SHARE *******/
+div.content{width: 810px; margin: auto}
+div.content div{float: left;}
+div.canvas{width: 500px; text-align: justify; margin-top:1% }
+div.writeform{width: 290px; border-left: #e6e6e6 solid 1px; padding: 4px}
+
+.writeform table.tweets{width: 100%; padding: 4px}
+.writeform table.tweets td{text-align: justify; vertical-align: top; padding: 2px}
+.writeform table.tweets h4,p{padding: 2px; margin: 0}
+.writeform table.tweets td.profilepic{width: 40px; margin-top: 10px}
+
+.writeform table td.profilepic img{width: 40px;}
+
+table.tweets td{vertical-align: top; padding: 2px}
+table.tweets td h4, p{padding: 2px; margin: 2px}
+
+/* input field options */
+input.color{width: 100%; border: 2px solid #aaa; text-align: center}
+table.options{width:80%; margin: auto; font-weight: bold;}
+table.options input.color{text-align: center}
+.options td{width: 33%; text-align: center; padding: 2px}
+
+input.submit{background: #777; color: #fff; font-weight: bold; padding: 2%; border-radius: 2px; cursor: pointer; border: 2px solid;}
+input.submit:hover{background: #c00;}
+
+textarea{width: 280px; height: 150px; border-radius: 2px; border: 1px solid #e5e5e5;
+    color:#777; background: #fefefe ;padding: 2%; font-size: 18px; font-family: "trebuchet ms", sans-serif }
+
+
+/**** GALLERY IMAGES *****/
+.images{float:left; display:block; margin:2%; padding: 5%; width:300px; height:auto;}
+
+.images a{display:block;}
+.images img{ float:left; display:block;width:300px;}
+
+.images img{-moz-box-shadow:5px 5px 10px #900;
+                  -webkit-box-shadow:5px 5px 10px #900;
+                            box-shadow:5px 5px 10px #900;}

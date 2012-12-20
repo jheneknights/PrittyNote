@@ -1,0 +1,101 @@
+/**
+ * CSS STYLING FILE
+ * User: Eugene
+ * Date: 9/19/12
+ * Time: 10:52 AM
+ *
+
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,500|Happy+Monkey|Electrolize);
+
+/* general purpose */
+body{font-family: 'Happy Monkey', sans-serif;  font-weight: 500; font-size:0.75em; color: #666}
+body{width: 100%; margin: auto; max-width: 1900px; min-width: 800px;}
+
+a{text-decoration:none; cursor: pointer}
+h3{color: #fefefe;}
+h1, h2, h4{color:#fc0;}
+h1{font-size:40px; font-weight:bold;}
+h1 span, h2 span, h3 span, h4 span{color:#fefefe;}
+
+span{color: #fc0}
+
+/**** HEADER ****/
+.header{width:100%; background:#c00; background: url(../images/cloud.png) #c00 top left; opacity: 0.9;
+border: 2px solid #a52a2a}
+.header h2{font-size: 2em}
+.header table{width: 100%}
+.header table td{width: 33%; text-align: center}
+
+.getuser{background: #FFCC00; width: 100%; padding: 1%; border-bottom: 2px solid #a52a2a}
+.getuser td{width: 100%; text-align: center; padding: 1%}
+a#signinwithtwitter{background: #39F; padding: 2%; color: #fff; border-radius: 4px; border: 2px solid #ffffff}
+a#twtme{color: #39f}
+
+/*** the note Images ***/
+.introduction{width: 100%;}
+.introduction img{width: 100%;}
+
+/*** welcome page explanation of the App ***/
+.explanation p{width: 80%; margin: auto; font-size: 1.2em}
+.explanation span{color: #c00;}
+.explanation{width: 100%; background: #ffffff; padding: 2%; position: fixed; bottom: 0; left: 0;
+    box-shadow: 3px 3px 5px 5px #555}
+.explanation hr{width: 90%; opacity: 0.4}
+
+
+/****** STATUS INPUT/SHARE *******/
+table.share{width: 100%; margin: auto; margin-top: 20px}
+.share td.gctd{width: 70%;}
+.share td.writeform{width: 30%}
+
+/* input field options */
+input.color{width: 80%; border: 2px solid #aaa}
+table.options{width: 350px; font-weight: bold;}
+table.options input.color{text-align: center}
+.options td{width: 33%; text-align: left; padding: 2.5px}
+
+input.submit{background: #777; color: #fff; font-weight: bold; padding: 2%; border-radius: 5px; cursor: pointer;
+border: 2px solid;}
+input.submit:hover{background: #c00;}
+
+textarea{width: 300px; height: 150px; border-radius: 5px; border: 2px solid #999;
+    color:#777; background: #fefefe ;padding: 2%; font-size: 18px; font-family: "trebuchet ms", sans-serif }
+
+/*** THE SLIDERS THAT OPEN AND CLOSE THE NOTE EDITOR ****/
+.closeE{width: 100%; background: #fc0 url("../images/pattern.png") top left repeat; text-align: center;
+box-shadow: 1px 1px 5px 5px #555}
+.closeE a{display: block;}
+
+/***** error handler response *****/
+#error{width: 100%; background: #83fe7a; text-align: center;}
+
+/* canvas options */
+.gctd{width: 60%; margin: auto}
+#statuscanvas{border: none;}/* 1px #bbb solid}*/
+
+table.share{width: 95%; margin: auto}
+.share td{vertical-align: top; text-align: center}
+.share td.gctd{width: 600px;}
+
+/**** GALLERY IMAGES *****/
+.images{float:left; display:block; margin:2%; padding: 5%; width:300px; height:auto;}
+
+.images a{display:block;}
+.images img{ float:left; display:block;width:300px;}
+
+.images img{-moz-box-shadow:5px 5px 10px #900;
+                  -webkit-box-shadow:5px 5px 10px #900;
+                            box-shadow:5px 5px 10px #900;}
+
+/**** USER"S NOTES SPACE ****/
+.board{width: 95%; margin: auto; background: url("../images/fabric.jpg") top left repeat;}
+.credits{width: 100%; margin: auto; bottom: 0; left: 0; background: #333; position: fixed; padding: 1%; text-align: left; border-top: 2px solid #777; color: #fff}
+.credits a{color: #fc0}
+.credits td{width: 25%}
+
+/*** FOOTER STYLING ****/
+.footer{width: 80%; margin: auto }
+.footer td{width: 25%; vertical-align: middle; text-align:center}
+.footer a{text-align: center; color: #fff}
+
+#footer{background: #333; padding: 0; margin: 0}
