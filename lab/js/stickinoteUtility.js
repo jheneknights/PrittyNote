@@ -331,9 +331,10 @@ function loadTweets() {
 
     var widthNeeded = $(window).width() - 820
 
-    if(widthNeeded >= 300) {
+    if(widthNeeded >= 300) {//if there is enough space to put Twitter content on the side
+        var newMargin = ($(window).width() - (820 + 300)) / 2 //now determine the margin for equal division
         $('.content')
-            .animate({margin: 20, top: 0}, 300, function() {
+            .animate({"margin-left": newMargin}, 300, function() {
                 $(this).wrap('<div class="wrapper">')
                 $('.wrapper')
                     .append('<div class="loadTweets"></div>')

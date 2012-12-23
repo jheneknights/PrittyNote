@@ -23,3 +23,15 @@
 
 </head>
 <body>
+
+<div class="header">
+	<table>
+		<tr>
+			<td>	<h2><img align="absmiddle" width="24px" src="../images/icons/logo.png" alt="" /> Stickinote</h2>
+			</td>
+			<td>
+				<h3 style="float: left;"> With thoughts, comes design.</h3>
+			</td>
+		</tr>
+	</table>
+</div>

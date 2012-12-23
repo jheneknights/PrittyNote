@@ -11,6 +11,8 @@
 body{font-weight: 300; font-size: 0.75em; color: #666}
 body{font-family:'trebuchet ms'; width: 100%; margin: auto; max-width: 1900px; min-width: 800px;}
 .wf-active body{font-family: 'comfortaa', sans-serif;}
+body{background: url("../images/dotmap.png") no-repeat}
+body{background-position: 0% 10%;}
 
 a{text-decoration:none; cursor: pointer}
 h3{color: #fefefe;}
@@ -21,10 +23,12 @@ h1 span, h2 span, h3 span, h4 span{color:#fefefe;}
 span{color: #fc0}
 
 /**** HEADER ****/
-.header{width:100%; background:#c00; background: url(../images/cloud.png) #c00 top left; opacity: 0.9;
-border: 2px solid #a52a2a}
-.header h2{font-size: 2em}
-.header table{width: 100%}
+.header{width:99.5%; background:#c00; background: url(../images/cloud.png) #c00 top left; opacity: 0.9;
+border: 2px solid #a52a2a; margin: auto}
+.header h2, h3{padding: 5px; margin: 0}
+.header h3{font-size: 1em;}
+.header h2{font-size: 1.5em;}
+.header table{width: 50%;}
 .header table td{width: 33%; text-align: center}
 
 .getuser{background: #FFCC00; width: 100%; padding: 1%; border-bottom: 2px solid #a52a2a}
@@ -45,7 +49,7 @@ a#twtme{color: #39f}
 
 
 /****** STATUS INPUT/SHARE *******/
-div.content{width: 810px; margin: auto}
+div.content{width: 810px; margin: auto;}
 div.content div{float: left;}
 div.canvas{width: 500px; text-align: justify; margin-top:1% }
 div.writeform{width: 290px; border-left: #e6e6e6 solid 1px; padding: 4px}
