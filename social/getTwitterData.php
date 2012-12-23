@@ -35,7 +35,7 @@ if (!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empt
  $_SESSION['oauth_id'] = $uid;
             $_SESSION['username'] = $userdata['username'];
             $_SESSION['oauth_provider'] = $userdata['oauth_provider'];
-            header("Location: home.php");
+            header("Location: index.php");
         }
     }
 } else {

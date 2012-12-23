@@ -37,7 +37,7 @@ $_SESSION['oauth_id'] = $uid;
         $_SESSION['username'] = $userdata['username'];
 		$_SESSION['email'] = $email;
         $_SESSION['oauth_provider'] = $userdata['oauth_provider'];
-        header("Location: home.php");
+        header("Location: index.php");
     }
 } else {
     # For testing purposes, if there was an error, let's kill the script

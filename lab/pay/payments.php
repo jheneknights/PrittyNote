@@ -5,14 +5,16 @@ $user = ""; //database username
 $pass = ""; //database password
 $db_name = ""; //database name
 
-// PayPal settings
-$paypal_email = 'paypal@example.com';
-$return_url = 'http://example.com/payment-successful.htm';
-$cancel_url = 'http://example.com/payment-cancelled.htm';
-$notify_url = 'http://example.com/paypal/payments.php';
+include_once("../includes/config.php");
 
-$item_name = 'Test Item';
-$item_amount = 5.00;
+// PayPal settings
+$paypal_email = 'eugene_1355557410_biz@gmail.com';
+$return_url = BASE_URL.'lab/pay/payment-successful';
+$cancel_url = '';
+$notify_url = BASE_URL.'lab/pay/payments.php';
+
+$item_name = 'Stickinote PRO';
+$item_amount = 3.99;
 
 // Include Functions
 include("functions.php");

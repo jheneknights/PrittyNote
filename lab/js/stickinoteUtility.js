@@ -288,18 +288,19 @@ function imageMergedata(imgid, userId, imgpath) {
         }, "json");
 }
 
+//function to check the string length, max characters
 function checkTextLength() {
     var text = getValue(),
         len = text.length,
         e = $("#post");
-
+    //MAX allowed is 350
     if(len > 350) {
         drawCanvas('#Oh #Snap! You\'ve #written too much!')
     }
-    else if(len < 20) {
+    else if(len < 20) { //least allowed is 20
         drawCanvas('#Hmmm! You\'ve barely #written anything!')
     }
-    else{
+    else{//if everthing is okay in between 20 - 350
         drawCanvas(drawText);
     }
 }
@@ -329,8 +330,9 @@ function loadTweets() {
         refreshTweets()
     }
 
-    var widthNeeded = $(window).width() - 820
+    $('.footer').animate({"font-size": "0.9em", "left": 0}, 600)
 
+    var widthNeeded = $(window).width() - 820
     if(widthNeeded >= 300) {//if there is enough space to put Twitter content on the side
         var newMargin = ($(window).width() - (820 + 300)) / 2 //now determine the margin for equal division
         $('.content')
@@ -547,10 +549,11 @@ function trimTweets() {
 
                     })
                     console.log(families.toString());
-                    drawCanvas(getValue());
                     $('#loadingPrefh2').html('Yaaeey! We good to go!')
                     setTimeout( function() {
-                        $('#loadingPref').fadeOut(200)
+                        $('#loadingPref').fadeOut(200, function(){
+                            drawCanvas(getValue()); //now draw the example canvas
+                        })
                     }, 500) //now remove the loading panel now
                 }
             }

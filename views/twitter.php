@@ -8,7 +8,7 @@ require_once('../need/twitteroauth.php');
 $connection = new TwitterOAuth(KEY, SECRET);
  
 /* Get temporary credentials. */
-$request_token = $connection->getRequestToken('http://stickinote.piqcha.com/views/home.php');
+$request_token = $connection->getRequestToken('http://stickinote.piqcha.com/views/index.php');
 
 /* Save temporary credentials to session. */
 $_SESSION['oauth_token'] = $token = $request_token['oauth_token'];

@@ -14,12 +14,14 @@
 	<link rel="shortcut icon"  type="image/x-icon" href="./images/icons/logo.ico"/>
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="./css/general.css" />
-	<link rel="stylesheet" href="./css/colorbox.css" />
+	<link rel="stylesheet" type="text/css" href="./css/general.css" />
+	<link rel="stylesheet" type="text/css" href="./css/gbtns.css" />
+	<link rel="stylesheet" type="text/css" href="./css/colorbox.css" />
 
 	<!-- Javascritpt -->
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/color/jscolor.js"></script>
+	<!--<script type="text/javascript" src="./js/less-1.3.1.min.js"></script>-->
 
 </head>
 <body>
@@ -30,7 +32,7 @@
 			<td>	<h2><img align="absmiddle" width="24px" src="../images/icons/logo.png" alt="" /> Stickinote</h2>
 			</td>
 			<td>
-				<h3 style="float: left;"> With thoughts, comes design.</h3>
+				<h3> With thoughts, comes design.</h3>
 			</td>
 		</tr>
 	</table>

@@ -92,7 +92,7 @@ $connection->post('statuses/update', array('status'=> $status[$rand], 'include_e
 */
 
 
-$redirect = BASE_URL.'lab/home.php';
+$redirect = BASE_URL.'lab/index.php';
 header('location:'.$redirect);
 
 $title = 'Stickinote | '.$user->screen_name.' #TeamFollowBack';
@@ -101,5 +101,5 @@ include_once('./includes/header.php');
 ?>
 
 <h2> Hey <span style="color: red;">@<?php echo $user->screen_name; ?></span> You are now signed in</h2>
-<a href="./home.php">Go Back</a>
+<a href="index.php">Go Back</a>
 <h2><a style="color: #adff2f;" href="./signout.php" title="sign out">not you, or sign out!</a></h2>

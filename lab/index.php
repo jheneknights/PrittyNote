@@ -18,7 +18,6 @@ include_once("./need/config.php");
 include_once("./includes/header.php");
 
 ?>
-<link rel="stylesheet" href="./css/gstyle_buttons.css" xmlns="http://www.w3.org/1999/html"/>
 <div class="content">
 	<div class="canvas">
 
@@ -53,7 +52,7 @@ include_once("./includes/header.php");
 	<div class="writeform">
 		<div class="preserveForm">
 			<button class="bluebtn loadTweets" onclick="loadTweets()">
-				<span class="label">Find Something Cool from Your Tweets</span>
+				<span class="label">Click Here: Find Something Cool from Twitter!</span>
 			</button>
 			<br />
 			<form name="field" id="getText" onsubmit="return(false)">
@@ -83,6 +82,8 @@ include_once("./includes/header.php");
 	</div>
 </div>
 
+<?php include_once('./includes/footer.php'); ?>
+
 <script type="text/javascript" src="js/stickinoteUtility.js"></script>
 <script type="text/javascript">
 
@@ -92,8 +93,6 @@ include_once("./includes/header.php");
 
 	//all functions to be carried once the page has entirely loaded
 	$(window).bind("load", function(){
-		//drawCanvas(getValue()); //for DEMO purposes
-		//installFont()
 		keyEvents()
 	});
 

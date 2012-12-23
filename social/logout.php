@@ -6,6 +6,6 @@ if (array_key_exists("logout", $_GET)) {
     unset($_SESSION['username']);
     unset($_SESSION['oauth_provider']);
     session_destroy();
-    header("location: home.php");
+    header("location: index.php");
 }
 ?>
