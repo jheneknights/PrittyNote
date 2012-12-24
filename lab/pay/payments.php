@@ -1,27 +1,23 @@
 <?php
-// Database variables
-$host = "localhost"; //database location
-$user = ""; //database username
-$pass = ""; //database password
-$db_name = ""; //database name
 
-include_once("../includes/config.php");
+/*
+ * @params -  password, passwordConfirm are not to be sent to payPal
+ */
+
+// Include Functions
+include_once("../need/config.php");
+include("functions.php");
 
 // PayPal settings
 $paypal_email = 'eugene_1355557410_biz@gmail.com';
-$return_url = BASE_URL.'lab/pay/payment-successful';
+$return_url = BASE_URL.'lab/pay/payment-successful.php';
 $cancel_url = '';
 $notify_url = BASE_URL.'lab/pay/payments.php';
 
 $item_name = 'Stickinote PRO';
 $item_amount = 3.99;
 
-// Include Functions
-include("functions.php");
-
-//Database Connection
-$link = mysql_connect($host, $user, $pass);
-mysql_select_db($db_name);
+$valueNotToBeSent = array('password', 'passwordConfirm');
 
 // Check if paypal request or response
 if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])){
@@ -36,9 +32,11 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])){
 	$querystring .= "amount=".urlencode($item_amount)."&";
 	
 	//loop for posted values and append to querystring
-	foreach($_POST as $key => $value){
-		$value = urlencode(stripslashes($value));
-		$querystring .= "$key=$value&";
+	foreach($_POST as $key => $value) {
+		if(!in_array($key, $valueNotToBeSent)) {
+			$value = urlencode(stripslashes($value));
+			$querystring .= "$key=$value&";
+		}
 	}
 	
 	// Append paypal return addresses
@@ -46,8 +44,8 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])){
 	$querystring .= "cancel_return=".urlencode(stripslashes($cancel_url))."&";
 	$querystring .= "notify_url=".urlencode($notify_url);
 	
-	// Append querystring with custom field
-	//$querystring .= "&custom=".USERID;
+	// Append querystring with custom field - password
+	$querystring .= "&custom=".sha1($_POST['passwordConfirm']);
 	
 	// Redirect to paypal IPN
 	header('location:https://www.sandbox.paypal.com/cgi-bin/webscr'.$querystring);
@@ -56,25 +54,20 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])){
 }else{
 	
 	// Response from Paypal
-
+	$data = array();
 	// read the post from PayPal system and add 'cmd'
 	$req = 'cmd=_notify-validate';
 	foreach ($_POST as $key => $value) {
 		$value = urlencode(stripslashes($value));
 		$value = preg_replace('/(.*[^%^0^D])(%0A)(.*)/i','${1}%0D%0A${3}',$value);// IPN fix
 		$req .= "&$key=$value";
+		$data[$key] = urldecode($value);
 	}
-	
-	// assign posted variables to local variables
-	$data['item_name']			= $_POST['item_name'];
-	$data['item_number'] 		= $_POST['item_number'];
-	$data['payment_status'] 	= $_POST['payment_status'];
-	$data['payment_amount'] 	= $_POST['mc_gross'];
-	$data['payment_currency']	= $_POST['mc_currency'];
-	$data['txn_id']				= $_POST['txn_id'];
-	$data['receiver_email'] 	= $_POST['receiver_email'];
-	$data['payer_email'] 		= $_POST['payer_email'];
-	$data['custom'] 			= $_POST['custom'];
+
+	$dataEncode = json_encode($data);
+	$fp = fopen('./paypal-transaction.json', 'w');
+	fwrite($fp, $dataEncode);
+	fclose($fp);
 		
 	// post back to PayPal system to validate
 	$header = "POST /cgi-bin/webscr HTTP/1.0\r\n";
@@ -93,7 +86,8 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])){
 			if (strcmp($res, "VERIFIED") == 0) {
 			
 				// Used for debugging
-				//@mail("you@youremail.com", "PAYPAL DEBUGGING", "Verified Response<br />data = <pre>".print_r($post, true)."</pre>");
+				@mail("eugenemutai@gmail.com", "PAYPAL DEBUGGING", "Verified Response<br />data = <pre>".print_r($post,
+				true)."</pre>");
 						
 				// Validate payment (Check unique txnid & correct price)
 				$valid_txnid = check_txnid($data['txn_id']);
@@ -118,7 +112,7 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])){
 				// E-mail admin or alert user
 				
 				// Used for debugging
-				//@mail("you@youremail.com", "PAYPAL DEBUGGING", "Invalid Response<br />data = <pre>".print_r($post, true)."</pre>");
+				@mail("eugenemutai@gmail.com", "PAYPAL DEBUGGING", "Invalid Response<br />data = <pre>".print_r($post, true)."</pre>");
 			}		
 		}		
 	fclose ($fp);

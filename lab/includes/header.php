@@ -16,7 +16,6 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="./css/general.css" />
 	<link rel="stylesheet" type="text/css" href="./css/gbtns.css" />
-	<link rel="stylesheet" type="text/css" href="./css/colorbox.css" />
 
 	<!-- Javascritpt -->
 	<script type="text/javascript" src="./js/jquery.min.js"></script>

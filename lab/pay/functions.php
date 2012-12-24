@@ -1,11 +1,14 @@
 <?php
 // functions.php
+
+require_once("../need/dbconn.php");
+
 function check_txnid($tnxid){
 	global $link;
 	return true;
 	$valid_txnid = true;
     //get result set
-    $sql = mysql_query("SELECT * FROM `payments` WHERE txnid = '$tnxid'", $link);		
+    $sql = mysql_query("SELECT * FROM `payments` WHERE txnid = '$tnxid'", $dbc);
 	if($row = mysql_fetch_array($sql)) {
         $valid_txnid = false;
 	}
@@ -40,8 +43,8 @@ function updatePayments($data){
                 '".$data['payment_status']."' ,
                 '".$data['item_number']."' ,
                 '".date("Y-m-d H:i:s")."' 
-                )", $link);
-    return mysql_insert_id($link);
+                )", $dbc);
+    return mysql_insert_id($dbc);
     }
 }
 ?>

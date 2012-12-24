@@ -13,13 +13,11 @@ if(isset($_COOKIE['smstable']) ) {
 }
 
 //SITE NECESSITIES
-define('SITENAME', 'piqcha_'); //sitename image prefix
+define('SITENAME', 'stickinote_'); //sitename image prefix
 
 define('ADMIN', '+254723001575');
 define('PASSWORD', 'wild1s75');
 define('EMAIL', 'error@piqcha.com'); //define admin email address here!!
-
-$adminno = '+254723001575';
 
 // LOCATION of mySQL connection script
 define('MYSQL', './need/dbconn.php'); //define path of mysql connection script

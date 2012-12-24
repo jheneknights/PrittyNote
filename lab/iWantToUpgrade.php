@@ -13,96 +13,150 @@ include_once("./includes/header.php");
 <!-- Bootstrap Components -->
 <link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap.min.css" />
 
-<table class="upgrade">
-	<tr>
-		<td class="intro">
-			<h2>Stickinote</h2>
-			<p><span>Stickinote</span> Lets you turn you statuses, thoughts or any text from where ever who knows you have gotten from into cool <span>look-a-like stickynote</span> images that you can share to your friends, back in <span>Twitter</span>. A color picker that gives you a <span>1,000,000</span> choises in color customisation of the background, status/thought/text and mentions/hashtags. Also an additional feature of turning the rest part of your text from where you choose to begin with into a different color entirely.
-			</p>
-		</td>
-		<td class="credentials">
-			<form class="form-horizontal" action="./pay/payments.php" method="post">
-				<div class="control-group">
-					<label class="control-label" for="inputEmail">Email</label>
-					<div class="controls">
-						<input type="text" name="payers_email" id="inputEmail" placeholder="Email" value="">
-						<p class="email"></p>
+<div class="theContent">
+	<div class="alert information">
+		Please in the form below, these are required fields to ensure your PRO account is kept safe and working.
+	</div>
+
+	<table class="upgrade">
+		<tr>
+			<td class="intro">
+				<img src="./images/dump2.jpg" alt="Stickinote" />
+			</td>
+			<td class="credentials">
+				<form class="form-horizontal" action="./pay/payments.php" method="post">
+					<div class="control-group">
+						<label class="control-label" for="inputEmail">Email</label>
+						<div class="controls">
+							<input type="text" name="payers_email" id="inputEmail" placeholder="Email" value="">
+							<p class="email"></p>
+						</div>
 					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label" for="inputPassword">Password</label>
-					<div class="controls">
-						<input type="password" name="password" id="inputPassword" placeholder="Password" value="">
-						<p class="password"></p>
+					<div class="control-group">
+						<label class="control-label" for="inputPassword">Password</label>
+						<div class="controls">
+							<input type="password" name="password" id="inputPassword" placeholder="Password" value="">
+							<p class="password"></p>
+						</div>
 					</div>
-				</div>
-				<div class="control-group proceed" style="display: none">
-					<div class="controls">
-						<button type="submit" class="btn btn-danger submitPaypal">Proceed to PayPal</button>
+					<div class="control-group">
+						<label class="control-label" for="inputPassword">Confirm Password</label>
+						<div class="controls">
+							<input type="password" name="passwordConfirm" id="inputPassword2" placeholder="Confirm Password" value="">
+							<p class="password"></p>
+						</div>
 					</div>
-				</div>
-				<input type="hidden" name="cmd" value="_xclick" />
-				<input type="hidden" name="no_note" value="1" />
-				<input type="hidden" name="currency_code" value="USD" />
-			</form>
-		</td>
-	</tr>
-</table>
+					<div class="control-group proceed" style="display: none">
+						<div class="controls">
+							<button type="submit" class="btn btn-danger submitPaypal">Proceed to PayPal</button>
+						</div>
+					</div>
+					<input type="hidden" name="cmd" value="_xclick" />
+					<input type="hidden" name="no_note" value="1" />
+					<input type="hidden" name="currency_code" value="USD" />
+				</form>
+			</td>
+		</tr>
+	</table>
+
+</div>
+<?php include_once('./includes/footer.php'); ?>
 
 <script type="text/javascript">
 	var email = $('#inputEmail'),
+		confirm = $('#inputPassword2'),
 		passw = $('#inputPassword'),
-		e = false, p = false
+		e = false, p = false, c = $('.information').html()
 
 	var validate = setInterval(function() {
 		allisGood()
-	}, 1000)
+	}, 1500)
 
 	$(window).bind('load', function() {
 		email.bind('keyup', function() {
-			confirmEmail($(this).val())
-		})
+			confirmEmail($(this).val(), $(this))
+		})//email address
 		passw.bind('keyup', function() {
-			passwordLen($(this).val())
-		})
+			passwordLen($(this).val(), $(this))
+		})//password
+		confirm.bind('keyup', function() {
+			passwordLen($(this).val(), $(this))
+		})//confirm password
+		$('#upgradeToPro a')
+			.addClass('red')
+			.css({color:'#cc0000'})
+			.removeAttr('href')
 	})
 
 	//EMAIL VALIDATION
-	function confirmEmail(str) {
-		if(str.length != 0 ) {
+	function confirmEmail(str, el) {
+		if(str.length != 0) {
 			var regEx= /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/;
 			var pregmatch = regEx.test(str);
 
 			if(pregmatch) {
-				$('.email').html('Nice email address')
+				el.siblings('p')
+					.removeClass('red')
+					.addClass('green')
+					.html('nice email address')
 				e = true
 			}else{
-				$('.email').html('Incomplete or invalid email address')
+				el.siblings('p')
+					.removeClass('green')
+					.addClass('red')
+					.html('incomplete or invalid email address')
 				e = false
+				$('.proceed').hide()
 			}
 		}
 	}
 
-	function passwordLen(str) {
-		if(str) {
+	function passwordLen(str, el) {
+		if(str.length != 0) {
 			var len = str.length
 			if(len >= 6) {
-				$('.password').html('mmh! no one is going to crack that!')
+				el.siblings('p')
+					.removeClass('red')
+					.addClass('green')
+					.html('mmh! no one is going to crack that!')
 				p = true
 			}else{
-				$('.password').html('too short, must be above 6 characters')
+				el.siblings('p')
+					.removeClass('green')
+					.addClass('red')
+					.html('too short! must be above 6 characters')
 				p = false
+				$('.proceed').hide()
 			}
 		}
 	}
 
 	function allisGood() {
-		if(p & e) {
-		  $('.proceed').show()
-			clearInterval(validate)
+		if(e) {
+			if(p) {
+				if(passw.val() == confirm.val()) {
+					$('.proceed').show(), $('.password').html('');
+					$('.information')
+						.removeClass('alert-info')
+						.addClass('alert-success')
+						.html('Yaey!! Let\'s go PRO')
+				} else {
+					$('.proceed').hide()
+					$('.password').addClass('red').html('Oops! Passwords do not match!');
+					$('.information')
+						.removeClass('alert-success')
+						.addClass('alert-info')
+						.html(c)
+				}
+			}
 		}else{
-			$('.proceed').hide()
-			setInterval(validate)
+			$('.proceed').hide(), setInterval(validate);
+			if(email.val().length != 0) {
+				$('.email')
+					.removeClass('green')
+					.addClass('red')
+					.html('Incomplete or invalid email address')
+			}
 		}
 	}
 </script>

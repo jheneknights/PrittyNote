@@ -3,15 +3,16 @@
  * User: Eugene
  * Date: 9/19/12
  * Time: 10:52 AM
- * http://fonts.googleapis.com/css?family=Marmelad|Electrolize|Dosis:400,500|Happy+Monkey
  */
 
+/* Stickinote brand font */
+@import url(http://fonts.googleapis.com/css?family=Comfortaa);
 
 /* general purpose */
-body{font-weight: 300; font-size: 0.75em; color: #666}
-body{font-family:'trebuchet ms'; width: 100%; margin: auto; max-width: 1900px; min-width: 800px;}
-.wf-active body{font-family: 'comfortaa', sans-serif;}
-body{background: url("../images/dotmap.png") no-repeat}
+body{font-weight: 400; font-size: 0.75em; color: #666}
+body{font-family:'trebuchet ms', sans-serif, cursive; width: 100%; margin: auto; max-width: 1900px; min-width: 800px;}
+.wf-active body{font-family: 'comfortaa', cursive; font-weight: 400}
+/*body{background: url("../images/dotmap.png") no-repeat}*/
 body{background-position: 0% 10%;}
 
 a{text-decoration:none; cursor: pointer}
@@ -21,6 +22,14 @@ h1{font-size:40px; font-weight:bold;}
 h1 span, h2 span, h3 span, h4 span{color:#fefefe;}
 
 span{color: #fc0}
+.information{width: 810px; margin: auto;  text-align: center; font-weight: bold;}
+
+/******* Colors *******/
+.red{color: #c00}
+.orange{color: #f56f16}
+.green{color: #33bd19}
+.yellow{color: #f7cb38}
+.blue{color: #4b8df8}
 
 /**** HEADER ****/
 .header{width:99.5%; background:#c00; background: url(../images/cloud.png) #c00 top left; opacity: 0.9;
@@ -78,11 +87,12 @@ textarea{width: 280px; height: 150px; border-radius: 2px; border: 1px solid #a2a
 
 
 /********* Upgrade to Pro *********/
-table.upgrade{width: 810px; margin: auto; margin-top: 5%; padding: 5px}
-table.upgrade td{width: 50%; text-align: justify}
-.upgrade p{font-size: 1.2em; font-weight: 100}
-.upgrade td.credentials p{font-size: 1em; padding: 0; margin: 0; color: #cc0000;}
-
+table.upgrade{width: 810px; margin: auto;}
+table.upgrade td{width: 50%; text-align: justify; vertical-align: top}
+.upgrade p{font-size: 1.3em; font-weight: 100}
+.upgrade td.credentials p{font-size: 1em; padding: 0; margin: 0;}
+.upgrade td img{padding: 0; margin: 0; width: 100%}
+.upgrade
 
 /**** GALLERY IMAGES *****/
 .images{float:left; display:block; margin:2%; padding: 5%; width:300px; height:auto;}
@@ -97,7 +107,7 @@ table.upgrade td{width: 50%; text-align: justify}
 }
 
 /******** FOOTER **********/
-.footer{position: fixed; bottom: 0; left: 18%; font-size: 1.2em; font-weight: 200}
+.footer{position: fixed; bottom: 0; left: 18%; font-size: 1.2em; font-weight: 200; background: #fff}
 .footer ul li{display: inline-block; padding: 2px 10px; border-right: #a2a2a2 solid 1px; color: #999}
 .footer ul li a{color: #999}
 .footer ul li a:hover{color: #c00}
