@@ -102,4 +102,4 @@ include_once('./includes/header.php');
 
 <h2> Hey <span style="color: red;">@<?php echo $user->screen_name; ?></span> You are now signed in</h2>
 <a href="index.php">Go Back</a>
-<h2><a style="color: #adff2f;" href="./signout.php" title="sign out">not you, or sign out!</a></h2>
+<h2><a style="color: #adff2f;" href="signOut.php" title="sign out">not you, or sign out!</a></h2>

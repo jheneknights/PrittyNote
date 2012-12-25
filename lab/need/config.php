@@ -1,9 +1,9 @@
 <?php // CONFIGURATION FILE
 
-define('LIVE', true); // (if) FALSE: all errors are sent to the browser
+define('LIVE', false); // (if) FALSE: all errors are sent to the browser
 
 //root folder of the domain
-define('BASE_URL','http://stickinote.piqcha.com/');
+define('BASE_URL', 'http://localhost/stickinote/');//'http://stickinote.piqcha.com/');
 
 //CHOOSE DATABASE - archive(all ccrap out there) or biblic(inspiration only)
 if(isset($_COOKIE['smstable']) ) {
@@ -20,7 +20,9 @@ define('PASSWORD', 'wild1s75');
 define('EMAIL', 'error@piqcha.com'); //define admin email address here!!
 
 // LOCATION of mySQL connection script
-define('MYSQL', './need/dbconn.php'); //define path of mysql connection script
+define('MYSQL', '../need/dbconn.php'); //define path of mysql connection script
+
+define('COOKIE_VALIDITY', time()+432000); //time()+2592000); //a month
 
 date_default_timezone_set('Africa/Nairobi');
 

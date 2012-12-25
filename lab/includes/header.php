@@ -20,6 +20,7 @@
 	<!-- Javascritpt -->
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/color/jscolor.js"></script>
+	<script type="text/javascript" src="./js/jquery.cookie.js"></script>
 	<!--<script type="text/javascript" src="./js/less-1.3.1.min.js"></script>-->
 
 </head>

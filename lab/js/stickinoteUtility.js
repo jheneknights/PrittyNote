@@ -14,11 +14,6 @@
  * @Full-Version
  */
 
-
-//BASIC VARIABLES
-var username = "Jhene";
-var userid = 56567576;
-var count = 10;
 var lineHeight  = 30;
 var maxWidth = 350;
 var y = 60;

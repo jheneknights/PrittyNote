@@ -20,4 +20,13 @@ trigger_error ('Could not connect to MySQL: ' . mysqli_connect_error() );
 
 }
 
+//function to Log User in
+function logMeIn($data, $dbc) {
+	$q = "select userid, pswd, emailaddr, twname, twimage, token, secret, address_name, txn_id from noticeboard where pswd='$data'";
+	$r =  mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br/>MySQL Error: " . mysqli_error($dbc));
+	if (mysqli_num_rows($r) >= 1) {
+		$_SESSION = mysqli_fetch_array($r, MYSQLI_ASSOC);
+	}
+}
+
 ?>

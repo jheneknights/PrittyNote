@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by Eugene Mutai
+ * Date: 12/24/12
+ * Time: 9:00 PM
+ * Description: Log In Page
+ */
 
 set_time_limit(0);
 ini_set('memory_limit', '50M'); //uses sth like 10 - just given it more
@@ -24,7 +30,7 @@ include_once("./includes/header.php");
 				<img src="./images/dump2.jpg" alt="Stickinote" />
 			</td>
 			<td class="credentials">
-				<form class="form-horizontal" action="./pay/payments.php" method="post">
+				<form class="form-horizontal" action="./need/signMein.php" method="post">
 					<div class="control-group">
 						<label class="control-label" for="inputEmail">Email</label>
 						<div class="controls">
@@ -39,21 +45,12 @@ include_once("./includes/header.php");
 							<p class="password"></p>
 						</div>
 					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputPassword">Confirm Password</label>
+
+					<div class="control-group proceed">
 						<div class="controls">
-							<input type="password" name="passwordConfirm" id="inputPassword2" placeholder="Confirm Password" value="">
-							<p class="password"></p>
+							<button type="submit" class="btn btn-danger">Sign In</button>
 						</div>
 					</div>
-					<div class="control-group proceed" style="display: none">
-						<div class="controls">
-							<button type="submit" class="btn btn-danger submitPaypal">Proceed to PayPal</button>
-						</div>
-					</div>
-					<input type="hidden" name="cmd" value="_xclick" />
-					<input type="hidden" name="no_note" value="1" />
-					<input type="hidden" name="currency_code" value="USD" />
 				</form>
 			</td>
 		</tr>
@@ -64,7 +61,6 @@ include_once("./includes/header.php");
 
 <script type="text/javascript">
 	var email = $('#inputEmail'),
-		confirm = $('#inputPassword2'),
 		passw = $('#inputPassword'),
 		e = false, p = false, c = $('.information').html()
 
@@ -76,16 +72,9 @@ include_once("./includes/header.php");
 		email.bind('blur', function() {
 			confirmEmail($(this).val(), $(this))
 		})//email address
-		passw.bind('keyup', function() {
+		passw.bind('blur keyup', function() {
 			passwordLen($(this).val(), $(this))
 		})//password
-		confirm.bind('keyup', function() {
-			passwordLen($(this).val(), $(this))
-		})//confirm password
-		$('#upgradeToPro a')
-			.addClass('red')
-			.css({color:'#cc0000'})
-			.removeAttr('href')
 	})
 
 	//EMAIL VALIDATION
@@ -134,20 +123,11 @@ include_once("./includes/header.php");
 	function allisGood() {
 		if(e) {
 			if(p) {
-				if(passw.val() == confirm.val()) {
-					$('.proceed').show(), $('.password').html('');
-					$('.information')
-						.removeClass('alert-info')
-						.addClass('alert-success')
-						.html('Yaey!! Let\'s finish up and have some fun.')
-				} else {
-					$('.proceed').hide()
-					$('.password').addClass('red').html('Oops! Passwords do not match!');
-					$('.information')
-						.removeClass('alert-success')
-						.addClass('alert-info')
-						.html(c)
-				}
+				$('.proceed').show(), $('.password').html('');
+				$('.information')
+					.removeClass('alert-info')
+					.addClass('alert-success')
+					.html('Yaey!! Let\'s finish up and have some fun.')
 			}
 		}else{
 			$('.proceed').hide(), setInterval(validate);
