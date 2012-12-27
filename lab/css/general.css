@@ -21,7 +21,7 @@ h1, h2, h4{color:#fc0;}
 h1{font-size:40px; font-weight:bold;}
 h1 span, h2 span, h3 span, h4 span{color:#fefefe;}
 
-span{color: #fc0}
+span{color: #c00}
 .information{width: 810px; margin: auto;  text-align: center; font-weight: bold;}
 
 /******* Colors *******/
@@ -92,7 +92,8 @@ table.upgrade td{width: 50%; text-align: justify; vertical-align: top}
 .upgrade p{font-size: 1.3em; font-weight: 100}
 .upgrade td.credentials p{font-size: 1em; padding: 0; margin: 0;}
 .upgrade td img{padding: 0; margin: 0; width: 100%}
-.upgrade
+.upgrade .explain{position: relative; bottom: 5%; left: 25%; width: 80%; font-size: 1.2em;
+    background: url("../images/wash-white-30.png") top left repeat; padding: 1%}
 
 /**** GALLERY IMAGES *****/
 .images{float:left; display:block; margin:2%; padding: 5%; width:300px; height:auto;}

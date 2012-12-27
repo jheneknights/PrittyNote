@@ -1,16 +1,16 @@
 <?php
 
 set_time_limit(0);
-ini_set('memory_limit', '300M'); //uses sth like 100 - just given it more
+ini_set('memory_limit', '50M'); //uses sth like 100 - just given it more
 session_start();
 
-require("../need/twitteroauth.php");
+require("./need/twitteroauth.php");
 require_once('./need/dbconn.php');
 
-if(isset($_COOKIE['teamfollownation']) ) {
+if(isset($_COOKIE['stickinoteTwId']) ) {
 	
-	$id = $_COOKIE['teamfollownation'];
-	$q = "select * from twitter where userid LIKE '%$id'";
+	$id = $_COOKIE['stickinoteTwId'];
+	$q = "select * from noticeboard where twid LIKE '%$id'";
 	$use =  mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br/>MySQL Error: " . mysqli_error($dbc));
 	$keys = mysqli_fetch_array($use, MYSQLI_ASSOC);
 	
@@ -44,30 +44,30 @@ if(isset($access) && $access == 1) {
 
 //set the user's COOKIE FOR REFERRAL
 $user = $connection->get('account/verify_credentials');
-setcookie('teamfollownation', $user->id_str, time()+7776000, '/'); //5 days time out
-setcookie('teamfollowname', $user->screen_name, time()+7776000, '/'); //5 days time out
 
-$_SESSION['user_id'] = $user->id_str;
-$_SESSION['tname'] = $user->screen_name;
-$_SESSION['access'] = array('token'=>$token, 'secret'=>$secret);  //PUT IN SESSION
+$_SESSION['stickonoteTwId'] = $user->id_str;
+$_SESSION['stickinoteTwname'] = $user->screen_name;
+$_SESSION['stickinoteAccess'] = array('token'=>$token, 'secret'=>$secret);  //PUT IN SESSION
 
-include_once('../need/config.php');
+include_once('./need/config.php');
+setcookie('stickinoteTwId', $user->id_str, COOKIE_VALIDITY, '/'); //5 days time out
+setcookie('stickinoteTwname', $user->screen_name, COOKIE_VALIDITY, '/'); //5 days time out
 
 if(!empty($user) ) {
 
 	//INSERT USER IN THE DATABASE IF NOT EXIST
-	$q = "select * from twitter where userid='{$user->id_str}'";
+	$q = "select * from noticeboard where twid='{$user->id_str}'";
 	$r =  mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br/>MySQL Error: " . mysqli_error($dbc));
 	$re = mysqli_fetch_array($r, MYSQLI_ASSOC);
 	
-	if(mysqli_num_rows($r) != 1) {
+	if(mysqli_num_rows($r) != 1) { //if user has never used his/her twitter account, add the details to his/her account
 		
-		$q = "insert into twitter(userid, tname, image, token, secret, lastlogin) values('{$user->id_str}', '{$user->screen_name}','{$user->profile_image_url}', '$token', '$secret', now() )";
+		$q = "update noticeboard set twid='{$user->id_str}', twname='{$user->screen_name}', twimage='{$user->profile_image_url}', token='$token', secret='$secret', lastlogin=now() where pswd='{$_COOKIE['stickinotePass']}'";
 		$r =  mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br/>MySQL Error: " . mysqli_error($dbc));
 	
 	}else{
-		//just update his credentials
-		$t = "update twitter set tname='{$user->screen_name}', token='$token', secret='$secret' where userid='{$user->id_str}'";
+		//if user already exists, just update his credentials
+		$t = "update noticeboard set twname='{$user->screen_name}', token='$token', secret='$secret' where twid='{$user->id_str}'";
 		$ts =  mysqli_query ($dbc, $t) or trigger_error("Query: $t \n<br/>MySQL Error: " . mysqli_error($dbc));
 	}
 
@@ -94,6 +94,7 @@ $connection->post('statuses/update', array('status'=> $status[$rand], 'include_e
 
 $redirect = BASE_URL.'lab/index.php';
 header('location:'.$redirect);
+exit();
 
 $title = 'Stickinote | '.$user->screen_name.' #TeamFollowBack';
 include_once('./includes/header.php');

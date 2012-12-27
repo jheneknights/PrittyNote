@@ -21,7 +21,7 @@ include_once("./includes/header.php");
 
 <div class="theContent">
 	<div class="alert information">
-		Please in the form below, these are required fields to ensure your PRO account is kept safe and working.
+		Not a PRO member, click here to use the trial version &nbsp; <a class="btn btn-info" href="tryItOut.php">Try It Out</a>
 	</div>
 
 	<table class="upgrade">
@@ -52,6 +52,11 @@ include_once("./includes/header.php");
 						</div>
 					</div>
 				</form>
+
+				<div class="explain">
+					<span>Stickinote</span> Lets you turn your thoughts or any text from where ever who knows you have gotten from into cool <span>look-a-like stickynote</span> images that you can share to your friends, back in <span class="blue">Twitter</span>, <span class="blue">Facebook</span>,
+					via <span class="orange">Email</span> and any other place that you'd want to share. It features a color picker that gives you a <span>1,000,000</span> choises in color customisation of the background, the text and mentions/hashtags. 20 <span>Themes</span> and <span>Font's</span> to choose from, <span>Image as background</span> capability, also <span>Twitter</span> intergration to make stickinotes from <span>tweets</span> tweeted that you like.
+				</div>
 			</td>
 		</tr>
 	</table>

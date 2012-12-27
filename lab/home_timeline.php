@@ -9,10 +9,10 @@ $path = explode('-', $_GET['id']);
 require("./need/twitteroauth.php");
 require_once('./need/dbconn.php');
 
-if(isset($_COOKIE['teamfollownation']) ) {
+if(isset($_COOKIE['stickinoteTwId']) ) {
 
-	$id = trim($_COOKIE['teamfollownation']);
-	$q = "select * from twitter where userid LIKE '%$id'";
+	$id = trim($_COOKIE['stickinoteTwId']);
+	$q = "select * from noticeboard where twid LIKE '%$id'";
 	$use =  mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br/>MySQL Error: " . mysqli_error($dbc));
 	$keys = mysqli_fetch_array($use, MYSQLI_ASSOC);
 
@@ -40,8 +40,8 @@ $lmt = $connection->get('account/rate_limit_status');
 if($lmt->remaining_hits !== 0) {
 	//Check to see if there is a LastId Set
 	if(isset($_REQUEST['last'])) {
-		$timeline = $connection->get('statuses/home_timeline', array('count'=>20,
-		                                                             'since_id'=>$_REQUEST['last'])); //'exclude_replies'=>'true'
+		$timeline = $connection->get('statuses/home_timeline', array('count'=>20, 'since_id'=>$_REQUEST['last']));
+		 //'exclude_replies'=>'true'
 	}else{
 		$timeline = $connection->get('statuses/home_timeline', array('count'=>100)); //'exclude_replies'=>'true'
 	}

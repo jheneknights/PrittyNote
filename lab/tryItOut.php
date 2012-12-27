@@ -4,7 +4,7 @@ set_time_limit(0);
 ini_set('memory_limit', '50M'); //uses sth like 10 - just given it more
 session_start();
 
-$title ="Stickinote - Labs";
+$title ="Stickinote - Try It Out";
 include_once("./need/config.php");
 include_once("./includes/header.php");
 
@@ -12,20 +12,11 @@ include_once("./includes/header.php");
 <div class="content">
 	<div class="canvas">
 
-		<table class="options">
-			<tr>
-				<td>
-					<input onchange="getColors()" id="bgclr" class="color" value="ffff8c" name="background">
-					Background
-				</td>
-				<td>
-					<input onchange="getColors()" id="text" class="color" value="666666" name="myText">Text Color
-				</td>
-				<td>
-					<input onchange="getColors()" id="hashtag" class="color" value="cc0000" name="hashtags" />Hashtags/Mention
-				</td>
-			</tr>
-		</table>
+		<div class="trialcolors">
+			<input type="hidden" value="ffff8c" id="bgclr" />
+			<input type="hidden" value="666666" id="text" />
+			<input type="hidden" value="cc0000" id="hashtag" />
+		</div>
 
 		<div id="choises">
 			<!-- This where all choises for Palletes and Fonts will be populated -->
@@ -42,9 +33,6 @@ include_once("./includes/header.php");
 
 	<div class="writeform">
 		<div class="preserveForm">
-			<button class="bluebtn loadTweets" onclick="loadTweets()">
-				<span class="label">Click Here: Find Something Cool from Twitter!</span>
-			</button>
 			<br />
 			<form name="field" id="getText" onsubmit="return(false)">
 				<div class="status">
@@ -59,15 +47,6 @@ include_once("./includes/header.php");
 						</button>
 					</div>
 
-					<div id="imageUpload">
-						<hr />
-						<p> Upload Background Image: </p>
-						<input type="file" name="image" id="image">
-						<button class="action redbtn removeBg">
-							<span class="label">Remove</span>
-						</button>
-					</div>
-				</div>
 			</form>
 		</div>
 	</div>
