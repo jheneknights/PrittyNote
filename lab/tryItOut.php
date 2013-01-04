@@ -58,7 +58,7 @@ include_once("./includes/header.php");
 <script type="text/javascript">
 
 	$( function () {
-		$("#choises").loadUtilities();
+		$("#choises").loadUtilities({fileorurl: 'js/stickinoteUtilitiesTV.json'});
 	}); //ONce the page starts to load up
 
 	//all functions to be carried once the page has entirely loaded

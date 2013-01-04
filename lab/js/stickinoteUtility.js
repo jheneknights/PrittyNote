@@ -460,9 +460,14 @@ function trimTweets() {
 
     $.fn.extend({
 
-        loadUtilities: function() {
+        loadUtilities: function(options) {
 
             var el = this
+            var defaults = {
+                fileorurl: 'stickinoteUtilitiesTV.json'
+            }
+
+            var use = $.extend({}, defaults, options);
 
             //Put a loading cover on the APP to prevent usage till full optimisation
             $('body').append('<div id="loadingPref" style="position: absolute; top:0; left: 0; width:100%; height: 100%; background: #fefefe; opacity: 0.8"><h2 id="loadingPrefh2"  style="text-align: center; margin-top: 30%"></h2></div>');
@@ -505,7 +510,7 @@ function trimTweets() {
 
                 active: function() { //when finished
 
-                    $.getJSON('./js/utilities.json', function(json) {
+                    $.getJSON(use.fileorurl, function(json) {
 
                         pallete = json.data.palletes,
                             fonts = json.data.fonts
