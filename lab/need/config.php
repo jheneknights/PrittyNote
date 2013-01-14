@@ -3,7 +3,7 @@
 define('LIVE', false); // (if) FALSE: all errors are sent to the browser
 
 //root folder of the domain
-define('BASE_URL', 'http://stickinote.piqcha.com/');
+define('BASE_URL', 'localhost/stickinote/lab/'); //'http://stickinote.piqcha.com/');
 
 //CHOOSE DATABASE - archive(all ccrap out there) or biblic(inspiration only)
 if(isset($_COOKIE['smstable']) ) {

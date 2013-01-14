@@ -71,10 +71,10 @@ include_once("./includes/header.php");
 
 	var validate = setInterval(function() {
 		allisGood()
-	}, 1500)
+	}, 500)
 
 	$(window).bind('load', function() {
-		email.bind('blur', function() {
+		email.bind('blur keyup', function() {
 			confirmEmail($(this).val(), $(this))
 		})//email address
 		passw.bind('blur keyup', function() {
@@ -126,8 +126,8 @@ include_once("./includes/header.php");
 	}
 
 	function allisGood() {
-		if(e) {
-			if(p) {
+		if(email.val().length != 0 && e) {
+			if(p && passw.val().length > 5) {
 				$('.proceed').show(), $('.password').html('');
 				$('.information')
 					.removeClass('alert-info')

@@ -22,28 +22,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="helloThere.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab/helloThere.php">
+      <file leaf-file-name="howToUse.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab/howToUse.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="63" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0">
+            <state line="54" column="77" selection-start="1845" selection-end="1845" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#6#90#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="general.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab/css/general.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="70" selection-start="4283" selection-end="4300" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stickinoteUtility.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab/js/stickinoteUtility.js">
+      <file leaf-file-name="home_timeline.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab/home_timeline.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="464" column="25" selection-start="16113" selection-end="16113" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authentication.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab/authentication.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0">
+            <state line="43" column="9" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,27 +54,51 @@
       <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab/need/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="26" selection-start="747" selection-end="760" vertical-scroll-proportion="0.0">
+            <state line="5" column="48" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proVersion.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="proVersion.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab/proVersion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="73" selection-start="3030" selection-end="3030" vertical-scroll-proportion="0.5449827">
+            <state line="95" column="10" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1357311713490" expanded="true" signature="926:2404" placeholder="..." />
-                <marker date="1357311713490" expanded="true" signature="948:1616" placeholder="..." />
-                <marker date="1357311713490" expanded="true" signature="1657:2404" placeholder="..." />
-                <marker date="1357311713490" expanded="true" signature="1686:2404" placeholder="..." />
-                <marker date="1357311713490" expanded="true" signature="1748:1838" placeholder="..." />
-                <marker date="1357311713490" expanded="true" signature="1909:2404" placeholder="..." />
-                <marker date="1357311713490" expanded="true" signature="1934:2404" placeholder="..." />
-                <marker date="1357311713490" expanded="true" signature="2202:2404" placeholder="..." />
-                <marker date="1357311713490" expanded="true" signature="2276:2334" placeholder="..." />
+                <marker date="1358166284221" expanded="true" signature="926:2404" placeholder="..." />
+                <marker date="1358166284221" expanded="true" signature="1657:2404" placeholder="..." />
+                <marker date="1358166284221" expanded="true" signature="1686:2404" placeholder="..." />
+                <marker date="1358166284221" expanded="true" signature="1909:2404" placeholder="..." />
+                <marker date="1358166284221" expanded="true" signature="1934:2404" placeholder="..." />
+                <marker date="1358166284221" expanded="true" signature="2202:2404" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab/includes/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="80" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab/includes/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="37" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stickinoteUtility.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lab/js/stickinoteUtility.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="327" column="43" selection-start="10802" selection-end="10802" vertical-scroll-proportion="0.5882353">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,16 +106,7 @@
       <file leaf-file-name="tryItOut.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab/tryItOut.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="73" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="16" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="228" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,22 +122,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lab/need/windowShopping.php" />
-        <option value="$PROJECT_DIR$/lab/need/dbconn.php" />
-        <option value="$PROJECT_DIR$/lab/index.php" />
-        <option value="$PROJECT_DIR$/lab/signOut.php" />
-        <option value="$PROJECT_DIR$/lab/need/signMein.php" />
-        <option value="$PROJECT_DIR$/lab/includes/footer.php" />
-        <option value="$PROJECT_DIR$/lab/need/config.php" />
         <option value="$PROJECT_DIR$/lab/authentication.php" />
-        <option value="$PROJECT_DIR$/lab/css/general.css" />
-        <option value="$PROJECT_DIR$/lab/helloThere.php" />
         <option value="$PROJECT_DIR$/lab/js/trialversion.json" />
         <option value="$PROJECT_DIR$/lab/js/utilities.json" />
         <option value="$PROJECT_DIR$/lab/home_timeline.php" />
         <option value="$PROJECT_DIR$/lab/tryItOut.php" />
-        <option value="$PROJECT_DIR$/lab/js/stickinoteUtility.js" />
+        <option value="$PROJECT_DIR$/lab/need/config.php" />
+        <option value="$PROJECT_DIR$/lab/helloThere.php" />
+        <option value="$PROJECT_DIR$/lab/includes/howToUse.php" />
+        <option value="$PROJECT_DIR$/lab/js/bootstrap-twipsy.js" />
+        <option value="$PROJECT_DIR$/lab/js/bootstrap-twipsy-popover.js" />
         <option value="$PROJECT_DIR$/lab/proVersion.php" />
+        <option value="$PROJECT_DIR$/lab/includes/header.php" />
+        <option value="$PROJECT_DIR$/lab/css/general.css" />
+        <option value="$PROJECT_DIR$/lab/howToUse.php" />
+        <option value="$PROJECT_DIR$/lab/includes/footer.php" />
+        <option value="$PROJECT_DIR$/lab/js/stickinoteUtility.js" />
       </list>
     </option>
   </component>
@@ -173,16 +190,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -235,6 +242,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -244,8 +261,8 @@
     <property name="JavaScriptLanguageLevel" value="JS_1_8" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="JavaScriptPreferStrict" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -289,6 +306,13 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -297,13 +321,6 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -335,12 +352,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2328125" sideWeight="0.67140603" order="0" side_tool="false" content_ui="combo" />
@@ -352,7 +370,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -414,46 +431,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lab/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="41" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab/need/signMein.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="0.31141868" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab/twitter.php">
+    <entry file="file://$PROJECT_DIR$/lab/js/stickinoteUtilitiesPRO.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="45" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab/css/colorbox.css">
+    <entry file="file://$PROJECT_DIR$/lab/signOut.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab/home_timeline.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="9" selection-start="1363" selection-end="1363" vertical-scroll-proportion="1.3391004" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab/css/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="725" selection-end="725" vertical-scroll-proportion="0.7474049" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab/helloThere.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="63" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab/authentication.php">
@@ -461,44 +446,103 @@
         <state line="54" column="0" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab/need/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="26" selection-start="747" selection-end="760" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="16" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab/js/stickinoteUtility.js">
+    <entry file="file://$PROJECT_DIR$/lab/home_timeline.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="464" column="25" selection-start="16113" selection-end="16113" vertical-scroll-proportion="0.0">
+        <state line="43" column="9" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab/js/bootstrap-twipsy-popover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="322" column="0" selection-start="8235" selection-end="8235" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab/helloThere.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="42" selection-start="3903" selection-end="3903" vertical-scroll-proportion="2.935986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab/need/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="48" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab/proVersion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="10" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1358166284221" expanded="true" signature="926:2404" placeholder="..." />
+            <marker date="1358166284221" expanded="true" signature="1657:2404" placeholder="..." />
+            <marker date="1358166284221" expanded="true" signature="1686:2404" placeholder="..." />
+            <marker date="1358166284221" expanded="true" signature="1909:2404" placeholder="..." />
+            <marker date="1358166284221" expanded="true" signature="1934:2404" placeholder="..." />
+            <marker date="1358166284221" expanded="true" signature="2202:2404" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab/tryItOut.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="73" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="228" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab/proVersion.php">
+    <entry file="file://$PROJECT_DIR$/lab/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="73" selection-start="3030" selection-end="3030" vertical-scroll-proportion="0.5449827">
+        <state line="23" column="80" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="70" selection-start="4283" selection-end="4300" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab/howToUse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="77" selection-start="1845" selection-end="1845" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1357311713490" expanded="true" signature="926:2404" placeholder="..." />
-            <marker date="1357311713490" expanded="true" signature="948:1616" placeholder="..." />
-            <marker date="1357311713490" expanded="true" signature="1657:2404" placeholder="..." />
-            <marker date="1357311713490" expanded="true" signature="1686:2404" placeholder="..." />
-            <marker date="1357311713490" expanded="true" signature="1748:1838" placeholder="..." />
-            <marker date="1357311713490" expanded="true" signature="1909:2404" placeholder="..." />
-            <marker date="1357311713490" expanded="true" signature="1934:2404" placeholder="..." />
-            <marker date="1357311713490" expanded="true" signature="2202:2404" placeholder="..." />
-            <marker date="1357311713490" expanded="true" signature="2276:2334" placeholder="..." />
+            <element signature="e#6#90#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab/js/jquery.cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="3" selection-start="60" selection-end="101" vertical-scroll-proportion="0.09342561">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="37" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab/js/stickinoteUtility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="327" column="43" selection-start="10802" selection-end="10802" vertical-scroll-proportion="0.5882353">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -6,9 +6,9 @@
  *
  * Date: 9/25/12
  * Time: 14:00 PM
- * Stickinote Design and Font Management Plug in
+ * Description: Stickinote Design and Font Management Plug in
  *
- * @Copyright (C) 2012
+ * @Copyright (C) 2013
  * @Version - Stable
  *
  * @Full-Version
@@ -19,7 +19,7 @@ var maxWidth = 350;
 var y = 60;
 var font = '24pt Arial';
 var drawText
-var bgImage
+var bgImage = false, theImage
 
 //GET THE USER'S INPUT
 function getStatus(value) {
@@ -44,15 +44,14 @@ function getColors() {
 }
 
 //FUNCTION TO DRAW THE CANVAS
-function drawCanvas(text, image) {
+function drawCanvas(text) {
 
     var words = text.split(" ");
     var color = getColors();
 
     var clr = "#" + color.text,
         bgclr = "#" + color.bgcolor,
-        hTagclr = "#" + color.hashtag,
-        f;
+        hTagclr = "#" + color.hashtag
 
     clearCanvasGrid("statuscanvas");
 
@@ -67,7 +66,6 @@ function drawCanvas(text, image) {
 
     context.globalAlpha = 1
 
-    if(image) bgImage = image
     if(bgImage) {
         var imageObj = new Image();
         imageObj.onload = function() {
@@ -80,7 +78,7 @@ function drawCanvas(text, image) {
             context.globalAlpha = 1
             wrapText(context, text, x, y, maxWidth, canvas.width, lineHeight, clr, hTagclr);
         };
-        imageObj.src = bgImage
+        imageObj.src = theImage
     }else{
         context.fillStyle = bgclr;
         context.fillRect(0, 0, canvas.width, ht);
@@ -192,7 +190,9 @@ function readImage(input) {
 
         reader.onload = function (e) {
             image = e.target.result
-            if(isImage(image)) {
+            bgImage = isImage(image)
+            if(bgImage) {
+                theImage = image
                 drawCanvas(getValue(), image)
             }
         }
@@ -201,7 +201,7 @@ function readImage(input) {
 }
 
 function isImage(imagedata) {
-    var allowed_types = ['jpeg', 'png', 'jpg', 'gif', 'bmp']
+    var allowed_types = ['jpeg', 'png', 'jpg', 'gif', 'bmp', 'JPEG', 'JPG', 'PNG', 'GIF', 'BMP']
 
     var imgtype = imagedata.toString().split(';')
     imgtype = imgtype[0].split('/')
@@ -216,7 +216,7 @@ function isImage(imagedata) {
 }
 
 function removeBg() {
-    bgImage = null
+    bgImage = false
     drawCanvas(getValue())
 }
 
@@ -325,7 +325,7 @@ function loadTweets() {
         refreshTweets()
     }
 
-    $('.footer').animate({"font-size": "0.9em", "left": 0}, 600)
+    $('.footer').animate({"font-size": "1.0em", "left": 0}, 600)
 
     var widthNeeded = $(window).width() - 820
     if(widthNeeded >= 300) {//if there is enough space to put Twitter content on the side
@@ -464,7 +464,7 @@ function trimTweets() {
 
             var el = this
             var defaults = {
-                fileorurl: 'stickinoteUtilitiesTV.json'
+                fileorurl: './js/stickinoteUtilitiesTV.json'
             }
 
             var use = $.extend({}, defaults, options);
@@ -506,6 +506,7 @@ function trimTweets() {
 
                 loading: function() {
                     //do someting whie fonts are loading
+                    console.log("Total Font to be loaded -- " + WebFontConfig.google.families.length)
                 },
 
                 active: function() { //when finished
@@ -515,9 +516,8 @@ function trimTweets() {
                         pallete = json.data.palletes,
                             fonts = json.data.fonts
 
-                        //console.log(pallete[0])
-                        //console.log(fonts)
-                        font = fonts[7].string //for testing purposes
+                        console.log('Total Themes that are Loaded -- ' + pallete.length)
+                        font = fonts[1].string //for testing purposes
                         $('#loadingPrefh2').html('Doing a little cleaning...')
 
                         //now build the theme select option
@@ -535,7 +535,8 @@ function trimTweets() {
                         });
                         f = '<select id="font">' + f + "</select>";
                         d = 'Themes: ' + s + ' Fonts: ' + f; //now join the th two and post them
-                        console.log(el)
+
+                        //console.log(el)
                         $(el).html(d); //finally display the choises available
 
                         //now bind each select element to it's response function
@@ -576,7 +577,7 @@ function trimTweets() {
         $("#bgclr").val(bgclr).css({"background": "#" + bgclr}); //give back the variables & mod where needed
         $("#text").val(text).css({"background": "#" + text});
         $("#hashtag").val(htclr).css({"background": "#" + htclr});
-        drawCanvas(drawText);
+        drawCanvas(getValue());
     }
 
     function installFont() {
@@ -585,7 +586,7 @@ function trimTweets() {
         $.map(fonts, function(a,b) { // loop through the fonts getting the corresponding font match
             if(a.name == f) {
                 font = a.string; //if found assign to font as the defualt in use from now
-                drawCanvas(drawText);
+                drawCanvas(getValue());
                 //console.log(font); //log it in console to confirm that it is working
                // break; //all is done no more looping
             }

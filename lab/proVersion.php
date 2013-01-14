@@ -97,18 +97,3 @@ include_once("./includes/header.php");
 </div>
 
 <?php include_once('./includes/footer.php'); ?>
-
-<script type="text/javascript" src="js/stickinoteUtility.js"></script>
-<script type="text/javascript">
-
-	$( function () {
-		$("#choises").loadUtilities({fileorurl:'js/stickinoteUtilitiesPRO.json'});
-	}); //ONce the page starts to load up
-
-	//all functions to be carried once the page has entirely loaded
-	$(window).bind("load", function(){
-		keyEvents()
-		$('#upgradeToPro a').attr('href', './signOut.php').html('Sign Out')
-	});
-
-</script>
