@@ -1,0 +1,16 @@
+[03-Apr-2013 06:01:01 Africa/Nairobi] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/prittyno/collect/need/dbconn.php on line 15
+[03-Apr-2013 06:01:01 Africa/Nairobi] PHP Notice:  Could not connect to MySQL: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/prittyno/collect/need/dbconn.php on line 19
+[03-Apr-2013 06:01:01 Africa/Nairobi] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/prittyno/collect/app/fetchtweets.php on line 19
+[03-Apr-2013 06:01:01 Africa/Nairobi] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/prittyno/collect/app/fetchtweets.php on line 19
+[03-Apr-2013 06:01:01 Africa/Nairobi] PHP Notice:  Query: select * from statuscron where userid='219248574'
+<br/>MySQL Error:  in /home/prittyno/collect/app/fetchtweets.php on line 19
+[03-Apr-2013 06:01:01 Africa/Nairobi] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/prittyno/collect/app/fetchtweets.php on line 20
+[12-Jun-2013 06:01:02 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/prittyno/collect/app/fetchtweets.php on line 46
+[13-Jun-2013 06:01:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/prittyno/collect/app/fetchtweets.php on line 46
+[14-Jun-2013 06:01:02 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/prittyno/collect/app/fetchtweets.php on line 46
+[15-Jun-2013 06:01:02 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/prittyno/collect/app/fetchtweets.php on line 46
+[16-Jun-2013 06:01:02 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/prittyno/collect/app/fetchtweets.php on line 46
+[17-Jun-2013 06:01:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/prittyno/collect/app/fetchtweets.php on line 46
+[18-Jun-2013 06:01:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/prittyno/collect/app/fetchtweets.php on line 46
+[19-Jun-2013 06:01:02 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/prittyno/collect/app/fetchtweets.php on line 46
+[20-Jun-2013 06:01:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/prittyno/collect/app/fetchtweets.php on line 46

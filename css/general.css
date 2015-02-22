@@ -3,13 +3,20 @@
  * User: Eugene
  * Date: 9/19/12
  * Time: 10:52 AM
- *
+ */
 
-@import url(http://fonts.googleapis.com/css?family=Dosis:400,500|Happy+Monkey|Electrolize);
-
+/* Stickinote brand font */
+@font-face {
+    font-family: 'Comfortaa';
+    src: local('Comfortaa Regular'), local('Comfortaa'), url('Comfortaa-Regular.ttf') format('truetype');
+}
 /* general purpose */
-body{font-family: 'Happy Monkey', sans-serif;  font-weight: 500; font-size:0.75em; color: #666}
-body{width: 100%; margin: auto; max-width: 1900px; min-width: 800px;}
+body{font-weight: 400; font-size: 0.75em; color: #666}
+body{font-family:'trebuchet ms', sans-serif, cursive; width: 100%; margin: auto; max-width: 1900px; min-width: 800px;}
+.wf-active body{font-family: 'comfortaa', cursive; font-weight: 400;}
+body{font-family: 'comfortaa', cursive; font-weight: 400}
+
+.bgimage{width: 99.8%; position: fixed; top: 0; left: 0; z-index: 0}
 
 a{text-decoration:none; cursor: pointer}
 h3{color: #fefefe;}
@@ -17,19 +24,59 @@ h1, h2, h4{color:#fc0;}
 h1{font-size:40px; font-weight:bold;}
 h1 span, h2 span, h3 span, h4 span{color:#fefefe;}
 
-span{color: #fc0}
+span{color: #e00}
+
+/******* Colors *******/
+.red{color: #c00}
+.orange{color: #f56f16}
+.green{color: #33bd19}
+.yellow{color: #f7cb38}
+.blue{color: #4b8df8}
+
+.effect{
+    background: #ee0000; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ee0000 0%, #d10e0e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ee0000), color-stop(100%,#d10e0e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ee0000 0%,#d10e0e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ee0000 0%,#d10e0e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ee0000 0%,#d10e0e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ee0000 0%,#d10e0e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee0000', endColorstr='#d10e0e',GradientType=0 ); /* IE6-9 */
+
+}
+.purchaseBtn{position: absolute; top: 65%; left: 45%; z-index: 3; text-align:  center; font-size: 3em;  padding: 5px 20px; border-radius: 4px; visibility: hidden;}
+.purchaseBtn a{color: #fefefe;}
+
+.information{width: 810px; margin: auto;  text-align: center; font-weight: bold;}
 
 /**** HEADER ****/
-.header{width:100%; background:#c00; background: url(../images/cloud.png) #c00 top left; opacity: 0.9;
-border: 2px solid #a52a2a}
-.header h2{font-size: 2em}
-.header table{width: 100%}
-.header table td{width: 33%; text-align: center}
+.header, .topheader{width: 99.7%; background:#c00; background: url(../images/cloud.png) #c00 top left; opacity: 0.9; border: 2px solid #a52a2a; margin: auto}
+.header h2, .topheader  h2, .header h3, .topheader h3{padding: 5px; margin: 0}
+.header h3, .topheader  h3{font-size: 1em;}
+.header h2, .topheader  h2{font-size: 1.5em;}
+.header table, .topheader  table{width: 100%;}
+.header table td, .topheader  table td{width: 33%; text-align: left}
+.header table td.twitterProf, .topheader  table td.twitterProf{text-align: center}
+.header a, .topheader a{color: #fefefe; font-weight: bold;}
+
+.topheader{position: fixed; top: 0; left: 0; z-index: 10}
 
 .getuser{background: #FFCC00; width: 100%; padding: 1%; border-bottom: 2px solid #a52a2a}
 .getuser td{width: 100%; text-align: center; padding: 1%}
 a#signinwithtwitter{background: #39F; padding: 2%; color: #fff; border-radius: 4px; border: 2px solid #ffffff}
 a#twtme{color: #39f}
+
+.explain{position: absolute; top: 100px; left: 2%; z-index: 2; width: 40%; padding: 20px; color: #fefefe; background: #000; opacity: 0.78; font-size: 1.5em}
+.explain a{text-align: center; padding: 10px}
+.sideimage{position: absolute; top: 0%; right: 0; z-index:1; width: 900px}
+.sideimage img{width: 100%}
+
+.tryBtn{position: absolute; top: 70%; left: 5%; z-index: 3; text-align:  center; font-size: 3em;  padding: 5px 20px; border-radius: 4px;}
+.tryBtn a{color: #fefefe;}
+
+.userlogin{width: 500px; margin: auto; padding-top: 1%; background: #fefefe; position: absolute; top: 20%; left: 30%; z-index: 10; opacity: 1; text-align: center;}
+.information{visibility: hidden;}
+.userlogin a{text-align: center; color: #fefefe; text-decoration: none; padding: 5px; margin: 2%; border-radius: 4px}
 
 /*** the note Images ***/
 .introduction{width: 100%;}
@@ -43,39 +90,47 @@ a#twtme{color: #39f}
 .explanation hr{width: 90%; opacity: 0.4}
 
 
+/****** check user ***********/
+.checkuser{width: 50%; margin: auto}
+
 /****** STATUS INPUT/SHARE *******/
-table.share{width: 100%; margin: auto; margin-top: 20px}
-.share td.gctd{width: 70%;}
-.share td.writeform{width: 30%}
+div.content{width: 810px; margin: auto; margin-bottom: 100px;}
+div.content div{float: left;}
+div.canvas{width: 500px; text-align: justify; margin-top:1%; margin-bottom: 4%}
+div.writeform{width: 290px; border-left: #e6e6e6 solid 1px; padding: 4px}
+
+.writeform table.tweets{width: 100%; padding: 4px}
+.writeform table.tweets td{text-align: justify; vertical-align: top; padding: 2px}
+.writeform table.tweets h4,p{padding: 2px; margin: 0}
+.writeform table.tweets td.profilepic{width: 40px; margin-top: 10px}
+
+.writeform table td.profilepic img{width: 40px;}
+
+table.tweets td{vertical-align: top; padding: 2px}
+table.tweets td h4, p{padding: 2px; margin: 2px}
+table.tweets td h4{color: #4b8df8}
 
 /* input field options */
-input.color{width: 80%; border: 2px solid #aaa}
-table.options{width: 350px; font-weight: bold;}
+input.color{width: 100%; border: 2px solid #a2a2a2; text-align: center}
+table.options{width:80%; margin: auto; font-weight: bold;}
 table.options input.color{text-align: center}
-.options td{width: 33%; text-align: left; padding: 2.5px}
+.options td{width: 33%; text-align: center; padding: 2px}
 
-input.submit{background: #777; color: #fff; font-weight: bold; padding: 2%; border-radius: 5px; cursor: pointer;
-border: 2px solid;}
+input.submit{background: #777; color: #fff; font-weight: bold; padding: 2%; border-radius: 2px; cursor: pointer; border: 2px solid;}
 input.submit:hover{background: #c00;}
 
-textarea{width: 300px; height: 150px; border-radius: 5px; border: 2px solid #999;
+textarea{width: 280px; height: 150px; border-radius: 2px; border: 1px solid #a2a2a2;
     color:#777; background: #fefefe ;padding: 2%; font-size: 18px; font-family: "trebuchet ms", sans-serif }
 
-/*** THE SLIDERS THAT OPEN AND CLOSE THE NOTE EDITOR ****/
-.closeE{width: 100%; background: #fc0 url("../images/pattern.png") top left repeat; text-align: center;
-box-shadow: 1px 1px 5px 5px #555}
-.closeE a{display: block;}
 
-/***** error handler response *****/
-#error{width: 100%; background: #83fe7a; text-align: center;}
-
-/* canvas options */
-.gctd{width: 60%; margin: auto}
-#statuscanvas{border: none;}/* 1px #bbb solid}*/
-
-table.share{width: 95%; margin: auto}
-.share td{vertical-align: top; text-align: center}
-.share td.gctd{width: 600px;}
+/********* Upgrade to Pro *********/
+table.upgrade{width: 810px; margin: auto;}
+table.upgrade td{width: 50%; text-align: justify; vertical-align: top}
+.upgrade p{font-size: 1.3em; font-weight: 100}
+.upgrade td.credentials p{font-size: 1em; padding: 0; margin: 0;}
+.upgrade td img{padding: 0; margin: 0; width: 100%}
+.upgrade .explain{position: relative; bottom: 5%; left: 25%; width: 80%; font-size: 1.2em;
+    background: url("../images/wash-white-30.png") top left repeat; padding: 1%}
 
 /**** GALLERY IMAGES *****/
 .images{float:left; display:block; margin:2%; padding: 5%; width:300px; height:auto;}
@@ -83,19 +138,23 @@ table.share{width: 95%; margin: auto}
 .images a{display:block;}
 .images img{ float:left; display:block;width:300px;}
 
-.images img{-moz-box-shadow:5px 5px 10px #900;
-                  -webkit-box-shadow:5px 5px 10px #900;
-                            box-shadow:5px 5px 10px #900;}
+.images img{
+    -moz-box-shadow:5px 5px 10px #900;
+    -webkit-box-shadow:5px 5px 10px #900;
+    box-shadow:5px 5px 10px #900;
+}
 
-/**** USER"S NOTES SPACE ****/
-.board{width: 95%; margin: auto; background: url("../images/fabric.jpg") top left repeat;}
-.credits{width: 100%; margin: auto; bottom: 0; left: 0; background: #333; position: fixed; padding: 1%; text-align: left; border-top: 2px solid #777; color: #fff}
-.credits a{color: #fc0}
-.credits td{width: 25%}
+/**** TERMS ******/
+.divheader{width: 800px; margin: auto; text-align: center}
+.terms{width: 800px; margin: auto}
+.terms a{color: #c00; text-decoration: underline;}
 
-/*** FOOTER STYLING ****/
-.footer{width: 80%; margin: auto }
-.footer td{width: 25%; vertical-align: middle; text-align:center}
-.footer a{text-align: center; color: #fff}
+/******** FOOTER **********/
+.footer{position: fixed; bottom: 0; left: 0; z-index: 10; font-size: 1em; font-weight: 200; background: #fff;}
+.footer ul{padding: 1% 0%; margin: 0}
+.footer ul li{display: inline-block; padding: 2px 10px; border-right: #a2a2a2 solid 1px; color: #999}
+.footer ul li a{color: #999}
+.footer ul li a:hover{color: #c00}
+.fb-blue{background: #3b5998; color: #ffffff; padding: 3px 8px}
 
-#footer{background: #333; padding: 0; margin: 0}
+.bgopen{background: url("../images/wash-white-30.png") repeat top center; margin: 0; padding: 0}

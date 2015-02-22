@@ -1,0 +1,13 @@
+{"data":
+	{"palletes": [
+		{"name": "Instructions", "color":["fefefe", "666666", "cc0000"]},
+		{"name":"Jhene Knights", "color":["ba0e08", "ebfafa", "f0f71b"]},
+		{"name":"StickiNote", "color":["ffff8c","666666","cc0000"]}
+			],
+		"fonts":[
+			{"name":"Comfortaa", "string":"22pt 'Comfortaa'"},
+			{"name":"Happy Monkey", "string": "22pt 'Happy Monkey'"},
+			{"name":"Schoolbell", "string":"26pt 'Schoolbell'"}
+		]
+	}
+}
